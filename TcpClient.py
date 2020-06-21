@@ -5,11 +5,13 @@ import time
 port_list = [5050, 5051, 5052, 5053, 5054, 5055]
 
 size = (os.path.getsize("1.mp4"))
+print(size)
 segments = []
 failed_servers = []
 alive_servers = []
 total_segments = list(range(len(port_list)))
 to_be_received = []
+resume = True
 def get_file_size():
     pass
 
@@ -23,6 +25,8 @@ def connect_to_server(server_num, port_num, segment_num= None):
     try:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         host = socket.gethostbyname(socket.gethostname())
+        #print(host)
+
         server.connect((host, port_num))
         #start = time.time()
 
@@ -45,8 +49,8 @@ def connect_to_server(server_num, port_num, segment_num= None):
         else:
             segments.append(data)
             print(f"Segment {segment_num} received successfully")
+            received_segments.append(segment_num)
 
-        received_segments.append(segment_num)
         print(len(data))
 
 
@@ -72,8 +76,6 @@ def connect_to_server(server_num, port_num, segment_num= None):
 thread = []
 
 def receive_segment_from_server( server, server_num, segment_num = None):
-
-
     segment_num_in_bytes = (str(segment_num)).encode()
     server.send(segment_num_in_bytes)
 def start():
@@ -84,7 +86,8 @@ def start():
         time.sleep(0.2)
 
 
-start()
+if resume:
+    start()
 
 
 for i in range(len(port_list) -1, -1, -1):
@@ -94,7 +97,7 @@ for i in range(len(port_list) -1, -1, -1):
 def get_remaining_segments():
     global alive_servers
     global to_be_received
-    if len(to_be_received)!=0:
+    if len(to_be_received) != 0:
         for seg_num in to_be_received:
             connect_to_server(alive_servers[0], port_list[alive_servers[0]], seg_num )
 
