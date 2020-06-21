@@ -19,7 +19,7 @@ def create_server(status, server_num, port_num):
     host = socket.gethostbyname(socket.gethostname())
     server_sockets.append(socket.socket(socket.AF_INET, socket.SOCK_STREAM))
     addr = (host, port_num)
-    print(addr)
+
     server_sockets[server_num].bind(addr)
     server_sockets[server_num].listen()
     try:

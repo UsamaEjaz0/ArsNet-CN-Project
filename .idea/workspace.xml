@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51dc3307-abfe-4fe8-91c8-a1867734c2c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TcpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/TcpClient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TcpServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/TcpServer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/total.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/total.mp4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,12 +23,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1bIsbw7wUHJtxlXGyVq2LEONKaP" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Projects/talash-master" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -174,6 +178,9 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592490969742">
       <screen x="0" y="0" width="1366" height="768" />
@@ -183,22 +190,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1591500327663" />
-    <state width="1345" height="186" key="GridCell.Tab.0.bottom" timestamp="1592730714129">
+    <state width="1345" height="184" key="GridCell.Tab.0.bottom" timestamp="1592733747432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="186" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1592730714129" />
-    <state width="1345" height="186" key="GridCell.Tab.0.center" timestamp="1592730714128">
+    <state width="1345" height="184" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1592733747432" />
+    <state width="1345" height="184" key="GridCell.Tab.0.center" timestamp="1592733747431">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="186" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1592730714128" />
-    <state width="1345" height="186" key="GridCell.Tab.0.left" timestamp="1592730714128">
+    <state width="1345" height="184" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1592733747431" />
+    <state width="1345" height="184" key="GridCell.Tab.0.left" timestamp="1592733747431">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="186" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1592730714128" />
-    <state width="1345" height="186" key="GridCell.Tab.0.right" timestamp="1592730714129">
+    <state width="1345" height="184" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1592733747431" />
+    <state width="1345" height="184" key="GridCell.Tab.0.right" timestamp="1592733747432">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="186" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1592730714129" />
+    <state width="1345" height="184" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1592733747432" />
     <state x="186" y="30" key="SettingsEditor" timestamp="1588331524092">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
