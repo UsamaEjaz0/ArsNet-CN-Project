@@ -2,7 +2,8 @@ import socket, os, time
 import threading
 from tqdm import tqdm
 import time
-port_list = [5050, 5051, 5052, 5053, 5054, 5055]
+port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057, 5058]
+port_list = [5050, 5051, 5052, 5053]
 size = (os.path.getsize("1.mp4"))
 #size = 1e+7
 segments = []
@@ -15,7 +16,7 @@ downloaded_bytes = [0] * len(port_list)
 download_speed = [0] * len(port_list)
 total_bytes = [0] * len(port_list)
 
-
+test1 = time.time()
 def get_file_size():
     pass
 
@@ -47,6 +48,7 @@ def connect_to_server(server_num, port_num, segment_num= None):
         start = time.time()
         for i in (range(10)):
             data += server.recv(size)
+            downloaded_bytes[server_num] = len(data)
         end = time.time()
 
         download_speed[server_num] = len(data)*0.001/(end-start)
@@ -80,7 +82,7 @@ def connect_to_server(server_num, port_num, segment_num= None):
 thread = []
 
 
-def receive_segment_from_server( server, server_num, segment_num = None):
+def receive_segment_from_server(server, server_num, segment_num=None):
     segment_num_in_bytes = (str(segment_num)).encode()
     server.send(segment_num_in_bytes)
 
@@ -101,11 +103,15 @@ def show_status(downloaded_bytes, total_bytes, download_speed):
 if resume:
     start()
 
-
 for i in range(len(port_list) -1, -1, -1):
    thread[i].join()
 
 show_status(downloaded_bytes, total_bytes, download_speed)
+
+
+def divide(string, parts):
+    k, m = divmod(len(string), parts)
+    return (string[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(parts))
 
 
 def get_remaining_segments():
@@ -125,3 +131,5 @@ chunk_size = 1024
 with open("total.mp4", "wb") as file:
     file.write(data)
 
+test2 = time.time()
+print(test2 - test1)
