@@ -38,7 +38,6 @@ def connect_to_server(server_num, port_num, segment_num= None):
 
         server.connect((host, port_num))
 
-
         #print("here")
         data = b''
         if segment_num is None:
@@ -119,7 +118,7 @@ def get_remaining_segments():
     global to_be_received
     if len(to_be_received) != 0:
         for seg_num in to_be_received:
-            connect_to_server(alive_servers[0], port_list[alive_servers[0]], seg_num )
+            connect_to_server(alive_servers[0], port_list[alive_servers[0]], seg_num)
 
 
 get_remaining_segments()

@@ -12,6 +12,7 @@ status = [True] * num_of_servers
 server_threads = []
 
 
+
 def create_server(status, server_num, port_num):
     global server_sockets
     server_sockets = []
