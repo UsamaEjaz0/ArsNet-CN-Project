@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51dc3307-abfe-4fe8-91c8-a1867734c2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TcpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/TcpClient.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +44,8 @@
       <recent name="C:\Users\uejaz\PycharmProjects\ComputerNetworks" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.trial_text_client">
-    <configuration name="FileSegmentation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.TcpClient">
+    <configuration name="TcpClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ComputerNetworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -56,7 +57,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FileSegmentation.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TcpClient.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,11 +152,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.TcpClient" />
+        <item itemvalue="Python.TcpServer" />
         <item itemvalue="Python.trial_text_client" />
         <item itemvalue="Python.trial_text_server2" />
         <item itemvalue="Python.trial_text_server" />
-        <item itemvalue="Python.FileSegmentation" />
-        <item itemvalue="Python.TcpServer" />
       </list>
     </recent_temporary>
   </component>
@@ -209,38 +210,38 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1591500327663" />
-    <state width="1345" height="180" key="GridCell.Tab.0.bottom" timestamp="1592833356470">
+    <state width="1345" height="180" key="GridCell.Tab.0.bottom" timestamp="1592846084137">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="180" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1592833356470" />
-    <state width="1345" height="180" key="GridCell.Tab.0.center" timestamp="1592833356469">
+    <state width="1345" height="180" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1592846084137" />
+    <state width="1345" height="180" key="GridCell.Tab.0.center" timestamp="1592846084137">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="180" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1592833356469" />
-    <state width="1345" height="180" key="GridCell.Tab.0.left" timestamp="1592833356469">
+    <state width="1345" height="180" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1592846084137" />
+    <state width="1345" height="180" key="GridCell.Tab.0.left" timestamp="1592846084136">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="180" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1592833356469" />
-    <state width="1345" height="180" key="GridCell.Tab.0.right" timestamp="1592833356470">
+    <state width="1345" height="180" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1592846084136" />
+    <state width="1345" height="180" key="GridCell.Tab.0.right" timestamp="1592846084137">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="180" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1592833356470" />
-    <state width="1345" height="238" key="GridCell.Tab.1.bottom" timestamp="1592833134502">
+    <state width="1345" height="180" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1592846084137" />
+    <state width="1345" height="238" key="GridCell.Tab.1.bottom" timestamp="1592840302217">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1592833134502" />
-    <state width="1345" height="238" key="GridCell.Tab.1.center" timestamp="1592833134502">
+    <state width="1345" height="238" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1592840302217" />
+    <state width="1345" height="238" key="GridCell.Tab.1.center" timestamp="1592840302217">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1592833134502" />
-    <state width="1345" height="238" key="GridCell.Tab.1.left" timestamp="1592833134502">
+    <state width="1345" height="238" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1592840302217" />
+    <state width="1345" height="238" key="GridCell.Tab.1.left" timestamp="1592840302217">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1592833134502" />
-    <state width="1345" height="238" key="GridCell.Tab.1.right" timestamp="1592833134502">
+    <state width="1345" height="238" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1592840302217" />
+    <state width="1345" height="238" key="GridCell.Tab.1.right" timestamp="1592840302217">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1592833134502" />
+    <state width="1345" height="238" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1592840302217" />
     <state x="186" y="30" key="SettingsEditor" timestamp="1588331524092">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

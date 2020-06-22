@@ -97,6 +97,7 @@ def start():
 def show_status(downloaded_bytes, total_bytes, download_speed):
     for i in range(len(port_list)):
         print(f"Server {i}: {downloaded_bytes[i]}/{total_bytes[i]}, download speed: {download_speed[i]} kb/s ")
+    
 
 
 if resume:
