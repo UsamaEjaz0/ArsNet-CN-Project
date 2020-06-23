@@ -2,10 +2,8 @@ import socket, os, time
 import threading
 from tqdm import tqdm
 import time
-port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057, 5058]
-port_list = [5050, 5051, 5052, 5053]
-size = (os.path.getsize("1.mp4"))
-#size = 1e+7
+port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057]
+
 segments = []
 failed_servers = []
 alive_servers = []
@@ -17,8 +15,13 @@ download_speed = [0] * len(port_list)
 total_bytes = [0] * len(port_list)
 segment_numbers = []
 test1 = time.time()
+
+
 def get_file_size():
     pass
+
+def divide(num, div):
+    return [num // div + (1 if x < num % div else 0) for x in range(div)]
 
 
 received_segments = []
@@ -32,6 +35,7 @@ def connect_to_server(server_num, port_num, segment_num= None):
     global to_be_received
     global download_speed
     global segment_numbers
+    global total_bytes
     try:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         host = socket.gethostbyname(socket.gethostname())
@@ -39,7 +43,9 @@ def connect_to_server(server_num, port_num, segment_num= None):
 
         server.connect((host, port_num))
 
-        #print("here")
+        file_size = int((server.recv(1024)).decode())
+        total_bytes = divide(file_size, len(port_list))
+
         data = b''
         if segment_num is None:
             segment_num = server_num
@@ -47,9 +53,10 @@ def connect_to_server(server_num, port_num, segment_num= None):
         receive_segment_from_server(server, server_num, segment_num)
         start = time.time()
         segment_numbers.append(int(server.recv(1024).decode()))
+        #print(segment_numbers)
 
         for i in (range(10)):
-            data += server.recv(size)
+            data += server.recv(file_size)
             downloaded_bytes[server_num] = len(data)
         end = time.time()
 
@@ -73,7 +80,7 @@ def connect_to_server(server_num, port_num, segment_num= None):
         #print(f"to be received {to_be_received}")
 
     except Exception as e:
-
+        print(e)
         #print(f"Server number {server_num} encountered a problem")
         failed_servers.append(server_num)
         alive_servers = [item for item in total_segments if item not in failed_servers]
@@ -94,7 +101,7 @@ def start():
     for i in range(len(port_list)):
         thread.append(threading.Thread(target=connect_to_server, args=(i, port_list[i])))
         thread[i].start()
-        #time.sleep(0.0000001)
+        time.sleep(0.01)
 
 
 def show_status(downloaded_bytes, total_bytes, download_speed):
@@ -102,19 +109,14 @@ def show_status(downloaded_bytes, total_bytes, download_speed):
         print(f"Server {i}: {downloaded_bytes[i]}/{total_bytes[i]}, download speed: {download_speed[i]} kb/s ")
     
 
-
 if resume:
     start()
 
 for i in range(len(port_list) -1, -1, -1):
-   thread[i].join()
+    thread[i].join()
 
 show_status(downloaded_bytes, total_bytes, download_speed)
 
-
-def divide(string, parts):
-    k, m = divmod(len(string), parts)
-    return (string[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(parts))
 
 
 def get_remaining_segments():

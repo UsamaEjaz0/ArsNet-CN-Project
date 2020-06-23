@@ -5,9 +5,8 @@ import pickle
 
 # Gandu Parameters
 time_interval = 2
-num_of_servers = 4
-port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057, 5058]
-port_list = [5050, 5051, 5052, 5053]
+num_of_servers = 8
+port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057]
 status = [True] * num_of_servers
 server_threads = []
 
@@ -32,7 +31,8 @@ def create_server(status, server_num, port_num):
             with open("1.mp4", "rb") as mp4:
 
                 data = mp4.read(size)
-
+                size = str(size).encode()
+                conn.send(size)
 
                 sent_length = 0
                 s = (int(conn.recv(1024)))
