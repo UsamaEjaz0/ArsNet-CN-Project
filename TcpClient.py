@@ -15,7 +15,7 @@ resume = True
 downloaded_bytes = [0] * len(port_list)
 download_speed = [0] * len(port_list)
 total_bytes = [0] * len(port_list)
-
+segment_numbers = []
 test1 = time.time()
 def get_file_size():
     pass
@@ -31,6 +31,7 @@ def connect_to_server(server_num, port_num, segment_num= None):
     global alive_servers
     global to_be_received
     global download_speed
+    global segment_numbers
     try:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         host = socket.gethostbyname(socket.gethostname())
@@ -45,6 +46,8 @@ def connect_to_server(server_num, port_num, segment_num= None):
 
         receive_segment_from_server(server, server_num, segment_num)
         start = time.time()
+        segment_numbers.append(int(server.recv(1024).decode()))
+
         for i in (range(10)):
             data += server.recv(size)
             downloaded_bytes[server_num] = len(data)
@@ -55,7 +58,7 @@ def connect_to_server(server_num, port_num, segment_num= None):
         #print(size)
 
         if segment_num in received_segments:
-            print("Already received once")
+            pass
         else:
             segments.append(data)
             #print(f"Segment {segment_num} received successfully")
@@ -91,7 +94,7 @@ def start():
     for i in range(len(port_list)):
         thread.append(threading.Thread(target=connect_to_server, args=(i, port_list[i])))
         thread[i].start()
-        time.sleep(0.2)
+        #time.sleep(0.0000001)
 
 
 def show_status(downloaded_bytes, total_bytes, download_speed):
@@ -123,6 +126,34 @@ def get_remaining_segments():
 
 
 get_remaining_segments()
+
+
+def partition(arr2, arr, low, high):
+    i = (low - 1)
+    pivot = arr[high]
+
+    for j in range(low, high):
+
+        if arr[j] <= pivot:
+            i = i + 1
+            arr[i], arr[j] = arr[j], arr[i]
+            arr2[i], arr2[j] = arr2[j], arr2[i]
+
+    arr[i + 1], arr[high] = arr[high], arr[i + 1]
+    arr2[i + 1], arr2[high] = arr2[high], arr2[i + 1]
+
+    return i + 1
+
+
+def quick_sort(arr2, arr, low, high):
+    if low < high:
+        pi = partition(arr2, arr, low, high)
+        quick_sort(arr2, arr, low, pi - 1)
+        quick_sort(arr2, arr, pi + 1, high)
+
+
+quick_sort(segments, segment_numbers, 0, len(segment_numbers)-1)
+print(segment_numbers)
 data = bytearray()
 for segment in segments:
     data.extend(segment)
@@ -133,3 +164,7 @@ with open("total.mp4", "wb") as file:
 
 test2 = time.time()
 print(test2 - test1)
+
+
+
+

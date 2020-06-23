@@ -46,7 +46,8 @@ def create_server(status, server_num, port_num):
                 sub_segments = []
                 for k in sub_segments_gen:
                     sub_segments.append(k)
-
+                seg_num = str(s).encode()
+                conn.send(seg_num)
                 for i in range(10):
                     conn.send(sub_segments[i])
 
