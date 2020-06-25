@@ -4,6 +4,7 @@ import threading
 import pickle
 
 # Gandu Parameters
+i_flag = 2
 time_interval = 2
 num_of_servers = 8
 port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057]
@@ -92,12 +93,18 @@ def divide(string, parts):
     k, m = divmod(len(string), parts)
     return (string[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(parts))
 
-
+def refresh():
+    while True:
+        time.sleep(i_flag)
+        clear_screen()
+        for i in range(num_of_servers):
+            print(f"Server {i}: Port: {port_list[i]} Status: {status[i]}, To shutdwon server {i} Press E{i} ")
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
     #print('\n'*50)
 
-
+outputThread = threading.Thread(target=refresh)
+outputThread.start()
 while True:
     inp = input()
     change_status(inp)
