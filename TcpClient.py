@@ -157,6 +157,7 @@ def get_remaining_segments():
 get_remaining_segments()
 
 
+
 def partition(arr2, arr, low, high):
     i = (low - 1)
     pivot = arr[high]
@@ -195,6 +196,6 @@ test2 = time.time()
 print(test2 - test1)
 
 
-while True:
-    time.sleep(i_flag)
-    refresh()
+# while True:
+#     time.sleep(i_flag)
+#     refresh()

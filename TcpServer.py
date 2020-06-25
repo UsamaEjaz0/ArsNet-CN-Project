@@ -103,8 +103,8 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
     #print('\n'*50)
 
-outputThread = threading.Thread(target=refresh)
-outputThread.start()
+# outputThread = threading.Thread(target=refresh)
+# outputThread.start()
 while True:
     inp = input()
     change_status(inp)
