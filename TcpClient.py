@@ -115,7 +115,25 @@ if resume:
 for i in range(len(port_list) -1, -1, -1):
     thread[i].join()
 
-show_status(downloaded_bytes, total_bytes, download_speed)
+
+
+def refresh():
+    show_status(downloaded_bytes, total_bytes, download_speed)
+
+
+print(failed_servers)
+
+remaining_bytes = 0
+for i in failed_servers:
+    remaining_bytes += total_bytes[i]
+to_be_added_bytes = divide(remaining_bytes, len(alive_servers))
+
+print(to_be_added_bytes)
+
+i = 0
+print(downloaded_bytes)
+refresh()
+
 
 
 def get_remaining_segments():
