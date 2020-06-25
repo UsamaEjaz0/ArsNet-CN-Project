@@ -141,9 +141,9 @@ for j in to_be_added_bytes:
         to_be_added_bytes.append(to_be_added_bytes[i])
     i += 1
 
-
+correct_downloaded_bytes = downloaded_bytes
 refresh()
-
+print(correct_downloaded_bytes)
 
 def get_remaining_segments():
 
@@ -156,8 +156,9 @@ def get_remaining_segments():
 
 get_remaining_segments()
 
-
-
+downloaded_bytes = correct_downloaded_bytes
+print(f"correc {correct_downloaded_bytes}")
+print(downloaded_bytes)
 def partition(arr2, arr, low, high):
     i = (low - 1)
     pivot = arr[high]
@@ -196,6 +197,6 @@ test2 = time.time()
 print(test2 - test1)
 
 
-# while True:
-#     time.sleep(i_flag)
-#     refresh()
+while True:
+    time.sleep(i_flag)
+    refresh()
