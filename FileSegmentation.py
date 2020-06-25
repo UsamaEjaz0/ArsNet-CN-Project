@@ -21,6 +21,7 @@ print(len(parts[0]))
 print(len(parts[1]))
 print(len(parts[2]))
 print(len(parts[3]))
+print(len(parts[3]))
 file = open("fileRecombined.mp4", "wb")
 file.write(parts[0]+parts[1]+parts[2]+parts[3])
 
