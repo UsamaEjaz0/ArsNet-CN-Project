@@ -118,8 +118,8 @@ for i in range(len(port_list) -1, -1, -1):
 show_status(downloaded_bytes, total_bytes, download_speed)
 
 
-
 def get_remaining_segments():
+
     global alive_servers
     global to_be_received
     if len(to_be_received) != 0:
