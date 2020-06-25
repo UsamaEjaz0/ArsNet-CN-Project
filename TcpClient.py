@@ -4,6 +4,7 @@ from tqdm import tqdm
 import time
 port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057]
 
+i_flag = 2
 segments = []
 failed_servers = []
 alive_servers = []
@@ -26,7 +27,7 @@ def divide(num, div):
 
 received_segments = []
 
-
+file_size = 0
 def connect_to_server(server_num, port_num, segment_num= None):
     global received_segments
     global total_segments
@@ -36,6 +37,7 @@ def connect_to_server(server_num, port_num, segment_num= None):
     global download_speed
     global segment_numbers
     global total_bytes
+    global file_size
     try:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         host = socket.gethostbyname(socket.gethostname())
@@ -44,6 +46,7 @@ def connect_to_server(server_num, port_num, segment_num= None):
         server.connect((host, port_num))
 
         file_size = int((server.recv(1024)).decode())
+
         total_bytes = divide(file_size, len(port_list))
 
         data = b''
@@ -107,7 +110,8 @@ def start():
 def show_status(downloaded_bytes, total_bytes, download_speed):
     for i in range(len(port_list)):
         print(f"Server {i}: {downloaded_bytes[i]}/{total_bytes[i]}, download speed: {download_speed[i]} kb/s ")
-    
+    print(f"Total : {sum(downloaded_bytes)}/{file_size}, download speed: {sum(download_speed)/len(download_speed)} kb/s")
+
 
 if resume:
     start()
@@ -118,22 +122,27 @@ for i in range(len(port_list) -1, -1, -1):
 
 
 def refresh():
+    os.system('cls' if os.name == 'nt' else 'clear')
     show_status(downloaded_bytes, total_bytes, download_speed)
 
-
-print(failed_servers)
 
 remaining_bytes = 0
 for i in failed_servers:
     remaining_bytes += total_bytes[i]
 to_be_added_bytes = divide(remaining_bytes, len(alive_servers))
 
-print(to_be_added_bytes)
+
 
 i = 0
-print(downloaded_bytes)
-refresh()
+for j in to_be_added_bytes:
+    if downloaded_bytes[alive_servers[i]] != 0:
+        downloaded_bytes[alive_servers[i]] += to_be_added_bytes[i]
+    else:
+        to_be_added_bytes.append(to_be_added_bytes[i])
+    i += 1
 
+
+refresh()
 
 
 def get_remaining_segments():
@@ -173,7 +182,7 @@ def quick_sort(arr2, arr, low, high):
 
 
 quick_sort(segments, segment_numbers, 0, len(segment_numbers)-1)
-print(segment_numbers)
+
 data = bytearray()
 for segment in segments:
     data.extend(segment)
@@ -186,5 +195,6 @@ test2 = time.time()
 print(test2 - test1)
 
 
-
-
+while True:
+    time.sleep(i_flag)
+    refresh()
