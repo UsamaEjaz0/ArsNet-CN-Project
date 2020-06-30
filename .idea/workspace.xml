@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51dc3307-abfe-4fe8-91c8-a1867734c2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/received.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/total.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/total.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TcpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/TcpClient.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +44,28 @@
       <recent name="C:\Users\uejaz\PycharmProjects\ComputerNetworks" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.TcpClient">
+  <component name="RunManager" selected="Python.Client">
+    <configuration name="Client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ComputerNetworks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\uejaz\Anaconda3\envs\ComputerNetworks\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/Client.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="TcpClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ComputerNetworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -88,6 +108,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ComputerNetworks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\uejaz\Anaconda3\envs\ComputerNetworks\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/server.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="trial_text_client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ComputerNetworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -109,55 +150,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="trial_text_server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ComputerNetworks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/trial_text_server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="trial_text_server2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ComputerNetworks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/trial_text_server2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+    <list>
+      <item itemvalue="Python.Client" />
+      <item itemvalue="Python.TcpClient" />
+      <item itemvalue="Python.TcpServer" />
+      <item itemvalue="Python.server" />
+      <item itemvalue="Python.trial_text_client" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Client" />
+        <item itemvalue="Python.server" />
         <item itemvalue="Python.TcpClient" />
         <item itemvalue="Python.TcpServer" />
         <item itemvalue="Python.trial_text_client" />
-        <item itemvalue="Python.trial_text_server2" />
-        <item itemvalue="Python.trial_text_server" />
       </list>
     </recent_temporary>
   </component>
@@ -203,6 +209,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593350534179">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1593350534179" />
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592490969742">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -211,22 +221,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1593086786710" />
-    <state width="1345" height="227" key="GridCell.Tab.0.bottom" timestamp="1593280231699">
+    <state width="1345" height="227" key="GridCell.Tab.0.bottom" timestamp="1593351744467">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593280231699" />
-    <state width="1345" height="227" key="GridCell.Tab.0.center" timestamp="1593280231699">
+    <state width="1345" height="227" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593351744467" />
+    <state width="1345" height="227" key="GridCell.Tab.0.center" timestamp="1593351744467">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1593280231699" />
-    <state width="1345" height="227" key="GridCell.Tab.0.left" timestamp="1593280231699">
+    <state width="1345" height="227" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1593351744467" />
+    <state width="1345" height="227" key="GridCell.Tab.0.left" timestamp="1593351744467">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1593280231699" />
-    <state width="1345" height="227" key="GridCell.Tab.0.right" timestamp="1593280231699">
+    <state width="1345" height="227" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1593351744467" />
+    <state width="1345" height="227" key="GridCell.Tab.0.right" timestamp="1593351744467">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1593280231699" />
+    <state width="1345" height="227" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1593351744467" />
     <state width="1345" height="111" key="GridCell.Tab.1.bottom" timestamp="1593109141247">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -243,10 +253,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1345" height="111" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1593109141247" />
-    <state x="186" y="30" key="SettingsEditor" timestamp="1588331524092">
+    <state x="186" y="30" key="SettingsEditor" timestamp="1593349094126">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="186" y="30" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1588331524092" />
+    <state x="186" y="30" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1593349094126" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1592593456368">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

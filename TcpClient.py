@@ -116,7 +116,7 @@ def show_status(downloaded_bytes, total_bytes, download_speed):
 if resume:
     start()
 
-for i in range(len(port_list) -1, -1, -1):
+for i in range(len(port_list)-1, -1, -1):
     thread[i].join()
 
 
