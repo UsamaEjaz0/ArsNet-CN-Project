@@ -2,8 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51dc3307-abfe-4fe8-91c8-a1867734c2c7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Client/Dump.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/Received.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/Received_segments.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/TcpClient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Misc/FileSegmentation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/TcpServer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/to_be_sent.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TcpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/TcpClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FileSegmentation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TcpClient.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TcpServer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fileRecombined.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/total.mp4" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +57,7 @@
       <recent name="C:\Users\uejaz\PycharmProjects\ComputerNetworks" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Client">
+  <component name="RunManager" selected="Python.TcpClient (1)">
     <configuration name="Client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ComputerNetworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -61,6 +74,27 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TcpClient (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ComputerNetworks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Client/TcpClient.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -95,6 +129,27 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Server" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Server/TcpServer.py" />
+      <option name="PARAMETERS" value="-i 2 -n 8 -f &quot;to_be_sent.mp4&quot;" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TcpServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ComputerNetworks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
@@ -108,62 +163,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="server" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ComputerNetworks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\uejaz\Anaconda3\envs\ComputerNetworks\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/server.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="true" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="trial_text_client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ComputerNetworks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Downloads" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$USER_HOME$/Downloads/trial_text_client.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.Client" />
       <item itemvalue="Python.TcpClient" />
       <item itemvalue="Python.TcpServer" />
-      <item itemvalue="Python.server" />
-      <item itemvalue="Python.trial_text_client" />
+      <item itemvalue="Python.TcpClient (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Client" />
-        <item itemvalue="Python.server" />
+        <item itemvalue="Python.TcpClient (1)" />
+        <item itemvalue="Python.TcpServer" />
         <item itemvalue="Python.TcpClient" />
         <item itemvalue="Python.TcpServer" />
-        <item itemvalue="Python.trial_text_client" />
+        <item itemvalue="Python.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -209,50 +221,50 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593350534179">
+    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594224882350">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1593350534179" />
+    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1594224882350" />
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592490969742">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1592490969742" />
-    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1593086786710">
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1593851158151">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1593086786710" />
-    <state width="1345" height="227" key="GridCell.Tab.0.bottom" timestamp="1593351744467">
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1593851158151" />
+    <state width="1345" height="227" key="GridCell.Tab.0.bottom" timestamp="1594224767699">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593351744467" />
-    <state width="1345" height="227" key="GridCell.Tab.0.center" timestamp="1593351744467">
+    <state width="1345" height="227" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594224767699" />
+    <state width="1345" height="227" key="GridCell.Tab.0.center" timestamp="1594224767699">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1593351744467" />
-    <state width="1345" height="227" key="GridCell.Tab.0.left" timestamp="1593351744467">
+    <state width="1345" height="227" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1594224767699" />
+    <state width="1345" height="227" key="GridCell.Tab.0.left" timestamp="1594224767699">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1593351744467" />
-    <state width="1345" height="227" key="GridCell.Tab.0.right" timestamp="1593351744467">
+    <state width="1345" height="227" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1594224767699" />
+    <state width="1345" height="227" key="GridCell.Tab.0.right" timestamp="1594224767699">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1593351744467" />
-    <state width="1345" height="111" key="GridCell.Tab.1.bottom" timestamp="1593109141247">
+    <state width="1345" height="227" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1594224767699" />
+    <state width="1345" height="111" key="GridCell.Tab.1.bottom" timestamp="1594162688806">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="111" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1593109141247" />
-    <state width="1345" height="111" key="GridCell.Tab.1.center" timestamp="1593109141247">
+    <state width="1345" height="111" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594162688806" />
+    <state width="1345" height="111" key="GridCell.Tab.1.center" timestamp="1594162688805">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="111" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1593109141247" />
-    <state width="1345" height="111" key="GridCell.Tab.1.left" timestamp="1593109141247">
+    <state width="1345" height="111" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1594162688805" />
+    <state width="1345" height="111" key="GridCell.Tab.1.left" timestamp="1594162688805">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="111" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1593109141247" />
-    <state width="1345" height="111" key="GridCell.Tab.1.right" timestamp="1593109141247">
+    <state width="1345" height="111" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1594162688805" />
+    <state width="1345" height="111" key="GridCell.Tab.1.right" timestamp="1594162688806">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="111" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1593109141247" />
+    <state width="1345" height="111" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1594162688806" />
     <state x="186" y="30" key="SettingsEditor" timestamp="1593349094126">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -265,9 +277,9 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="379" y="208" key="com.intellij.ide.util.TipDialog/0.0.1366.768@0.0.1366.768" timestamp="1590643544600" />
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1592728758498">
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1594146797020">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1592728758498" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1594146797020" />
   </component>
 </project>
