@@ -1,10 +1,8 @@
-import socket, os, time
+import socket, os
 import threading
-from tqdm import tqdm
 import time
 import argparse
 parser = argparse.ArgumentParser()
-#adding parameters
 
 parser.add_argument('-i', '--metric_interval', help="", type=int, default=2)
 parser.add_argument('-o', '--output_location', help="", default="Received.mp4")
@@ -15,7 +13,7 @@ args = parser.parse_args()
 
 
 port_list = args.list_of_ports
-port_list = list(map(int,port_list))
+port_list = list(map(int, port_list))
 i_flag = args.metric_interval
 file_location = args.output_location
 host = args.server_ip_address
@@ -34,9 +32,9 @@ total_bytes = [0] * len(port_list)
 segment_numbers = []
 
 
-
 def get_file_size():
     pass
+
 
 def divide(num, div):
     return [num // div + (1 if x < num % div else 0) for x in range(div)]
@@ -62,7 +60,7 @@ def connect_to_server(server_num, port_num, segment_num= None):
     try:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-        #print(host)
+
 
         server.connect((host, port_num))
 
@@ -77,40 +75,36 @@ def connect_to_server(server_num, port_num, segment_num= None):
         receive_segment_from_server(server, server_num, segment_num)
         start = time.time()
         segment_numbers.append(int(server.recv(1024).decode()))
-        #print(segment_numbers)
 
-        for i in (range(20)):
+        for _ in (range(20)):
             data += server.recv(file_size)
             downloaded_bytes[server_num] = len(data)
         end = time.time()
 
         download_speed[server_num] = len(data)*0.001/(end-start)
-        #print(download_speed)
-        #print(size)
+
 
         if segment_num in received_segments:
             pass
         else:
 
             segments.append(data)
-            #print(f"Segment {segment_num} received successfully")
             received_segments.append(segment_num)
 
-        #print(len(data))
+
 
 
 
 
         to_be_received = [item for item in total_segments if item not in received_segments]
-        #print(f"to be received {to_be_received}")
         return server_num
     except Exception as e:
         failed_servers.append(server_num)
         alive_servers = [item for item in total_segments if item not in failed_servers]
-        #print(f"failed_serves {failed_servers}")
-        #print(f"alive_servers {alive_servers}")
+
         if resume:
-            connect_to_server((server_num + 1) % len(port_list), port_list[(server_num +1)% len(port_list)], segment_num)
+            connect_to_server((server_num + 1) % len(port_list),
+                              port_list[(server_num + 1) % len(port_list)], segment_num)
 
 
 thread = []
@@ -132,7 +126,7 @@ def start():
 def show_status(downloaded_bytes, total_bytes, download_speed):
     for i in range(len(port_list)):
         print(f"Server {i}: {downloaded_bytes[i]}/{total_bytes[i]}, download speed: {download_speed[i]} kb/s ")
-    print(f"Total : {sum(downloaded_bytes)}/{file_size}, download speed: {sum(download_speed)/len(download_speed)} kb/s")
+    print(f"Total: {sum(downloaded_bytes)}/{file_size}, download speed: {sum(download_speed)/len(download_speed)} kb/s")
 
 
 
@@ -141,7 +135,6 @@ start()
 if not resume:
     for i in range(len(port_list)-1, -1, -1):
         thread[i].join()
-
 
 
 def refresh():
@@ -154,8 +147,6 @@ for i in failed_servers:
     remaining_bytes += total_bytes[i]
 to_be_added_bytes = divide(remaining_bytes, len(alive_servers))
 
-
-
 i = 0
 
 correct = downloaded_bytes[0]
@@ -164,6 +155,8 @@ refresh()
 gotten_remaining_segs = False
 used_server = 0
 server_used_for_resume = 0
+
+
 def get_remaining_segments():
     global gotten_remaining_segs
     global alive_servers
@@ -177,9 +170,7 @@ def get_remaining_segments():
         gotten_remaining_segs = True
 
 
-#agr resume false hai toh ye sb segments le aye ga aur sb file m write hojayean gay
-#agr resume on hai toh ye band krna hoga. aur
-#get_remaining_segments()
+get_remaining_segments()
 if gotten_remaining_segs:
     if not resume:
         for j in to_be_added_bytes:
@@ -188,8 +179,9 @@ if gotten_remaining_segs:
             else:
                 to_be_added_bytes.append(to_be_added_bytes[i])
             i += 1
-    if sum(downloaded_bytes)!= file_size:
+    if sum(downloaded_bytes) != file_size:
         downloaded_bytes[used_server] += file_size-sum(downloaded_bytes)
+
 
 def partition(arr2, arr, low, high):
     i = (low - 1)
@@ -218,21 +210,16 @@ def quick_sort(arr2, arr, low, high):
 quick_sort(segments, segment_numbers, 0, len(segment_numbers)-1)
 
 
-
 if not resume:
 
     dumpFile = open("Dump.txt", "wb")
-
 
     for s in segments:
 
         dumpFile.write(bytes(b'lol'))
         dumpFile.write(s)
 
-
-
     dumpFile.close()
-
     received_segs = open("Received_segments.txt", "w")
     received_segs.write(str(segment_numbers))
     received_segs.close()
@@ -249,8 +236,7 @@ if resume:
     received_segs = open("Received_segments.txt", "r")
     seg_nums = received_segs.read()
 
-
-    seg_nums = seg_nums.replace("[","")
+    seg_nums = seg_nums.replace("[", "")
     seg_nums = seg_nums.replace("]", "")
     seg_nums = (seg_nums.split(","))
     seg_nums = list(map(int,seg_nums))
@@ -266,11 +252,7 @@ if resume:
     for o in bas_yar:
         downloaded_bytes[server_used_for_resume] += total_bytes[server_used_for_resume]
 
-
-
-
     quick_sort(segments, segment_numbers, 0, len(segment_numbers) - 1)
-
 
 
 data = bytearray()
@@ -282,9 +264,6 @@ chunk_size = 1024
 
 with open(file_location, "wb") as file:
     file.write(data)
-
-
-
 
 while True:
     time.sleep(i_flag)
