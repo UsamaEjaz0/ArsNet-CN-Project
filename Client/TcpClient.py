@@ -3,17 +3,30 @@ import threading
 from tqdm import tqdm
 import time
 import argparse
+parser = argparse.ArgumentParser()
+#adding parameters
+
+parser.add_argument('-i', '--metric_interval', help="", type=int, default=2)
+parser.add_argument('-o', '--output_location', help="", default="Received.mp4")
+parser.add_argument('-a', '--server_ip_address', help="", default=socket.gethostbyname(socket.gethostname()))
+parser.add_argument('-p', '--list_of_ports', nargs='+', help="")
+parser.add_argument('-r', '--resume', help="", default=0)
+args = parser.parse_args()
 
 
-port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057]
+port_list = args.list_of_ports
+port_list = list(map(int,port_list))
+i_flag = args.metric_interval
+file_location = args.output_location
+host = args.server_ip_address
+resume = int(args.resume)
 
-i_flag = 2
 segments = []
 failed_servers = []
 alive_servers =list(range(len(port_list)))
 total_segments = list(range(len(port_list)))
 to_be_received = []
-resume = False
+
 
 downloaded_bytes = [0] * len(port_list)
 download_speed = [0] * len(port_list)
@@ -45,9 +58,10 @@ def connect_to_server(server_num, port_num, segment_num= None):
     global segment_numbers
     global total_bytes
     global file_size
+    global host
     try:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        host = socket.gethostbyname(socket.gethostname())
+
         #print(host)
 
         server.connect((host, port_num))
@@ -165,7 +179,7 @@ def get_remaining_segments():
 
 #agr resume false hai toh ye sb segments le aye ga aur sb file m write hojayean gay
 #agr resume on hai toh ye band krna hoga. aur
-get_remaining_segments()
+#get_remaining_segments()
 if gotten_remaining_segs:
     if not resume:
         for j in to_be_added_bytes:
@@ -266,7 +280,7 @@ for segment in segments:
 
 chunk_size = 1024
 
-with open("Received.mp4", "wb") as file:
+with open(file_location, "wb") as file:
     file.write(data)
 
 

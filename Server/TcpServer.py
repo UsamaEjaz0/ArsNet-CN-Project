@@ -11,7 +11,6 @@ parser.add_argument('-i', '--status_interval', help="", type=int, default=2)
 parser.add_argument('-n', '--num_servers', help="", type=int)
 parser.add_argument('-f', '--file_location', help="", default="to_be_sent.mp4")
 parser.add_argument('-p', '--list_of_ports', nargs='+', help="", type=int)
-
 args = parser.parse_args()
 
 
@@ -19,7 +18,7 @@ args = parser.parse_args()
 # i_flag = 2
 # num_of_servers = 8
 # file_location = "to_be_sent.mp4"
-#port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057]
+port_list = [5050, 5051, 5052, 5053, 5054, 5055, 5056, 5057]
 
 i_flag = args.status_interval
 num_of_servers = args.num_servers
@@ -121,8 +120,8 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
     #print('\n'*50)
 
-outputThread = threading.Thread(target=refresh)
-outputThread.start()
+#outputThread = threading.Thread(target=refresh)
+#outputThread.start()
 while True:
     inp = input()
     change_status(inp)

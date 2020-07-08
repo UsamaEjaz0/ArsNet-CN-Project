@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51dc3307-abfe-4fe8-91c8-a1867734c2c7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/Dump.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/Received.mp4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/Received_segments.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/TcpClient.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Misc/FileSegmentation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/TcpServer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/to_be_sent.mp4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/FileSegmentation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TcpClient.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TcpServer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileRecombined.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/total.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Dump.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Dump.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Received.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Received.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Received_segments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Received_segments.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TcpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TcpClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/TcpServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/TcpServer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Misc/FileSegmentation.py" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -57,7 +48,7 @@
       <recent name="C:\Users\uejaz\PycharmProjects\ComputerNetworks" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.TcpClient (1)">
+  <component name="RunManager" selected="Python.TcpClient">
     <configuration name="Client" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ComputerNetworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,6 +65,27 @@
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="FileSegmentation" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ComputerNetworks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Misc" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Misc/FileSegmentation.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
@@ -108,12 +120,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Client" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TcpClient.py" />
-      <option name="PARAMETERS" value="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Client/TcpClient.py" />
+      <option name="PARAMETERS" value="-i 2 -a &quot;192.168.56.1&quot; -o &quot;received.mp4&quot; -r 0 -p 5050 5051 5052 5053 5054 5055 5056 5057" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -134,7 +146,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Server/TcpServer.py" />
-      <option name="PARAMETERS" value="-i 2 -n 8 -f &quot;to_be_sent.mp4&quot;" />
+      <option name="PARAMETERS" value="-i 2 -n 8 -f &quot;to_be_sent.mp4&quot; -p 5050 5051 5052 5053 5054 5055 5056 5057" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -167,13 +179,13 @@
       <item itemvalue="Python.Client" />
       <item itemvalue="Python.TcpClient" />
       <item itemvalue="Python.TcpServer" />
-      <item itemvalue="Python.TcpClient (1)" />
+      <item itemvalue="Python.FileSegmentation" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.TcpClient (1)" />
-        <item itemvalue="Python.TcpServer" />
         <item itemvalue="Python.TcpClient" />
+        <item itemvalue="Python.TcpServer" />
+        <item itemvalue="Python.FileSegmentation" />
         <item itemvalue="Python.TcpServer" />
         <item itemvalue="Python.Client" />
       </list>
@@ -221,50 +233,50 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594224882350">
+    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594227457967">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="137" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1594224882350" />
+    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1594227457967" />
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592490969742">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1592490969742" />
-    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1593851158151">
+    <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1594225088615">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1593851158151" />
-    <state width="1345" height="227" key="GridCell.Tab.0.bottom" timestamp="1594224767699">
+    <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1594225088615" />
+    <state width="1345" height="227" key="GridCell.Tab.0.bottom" timestamp="1594227490290">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594224767699" />
-    <state width="1345" height="227" key="GridCell.Tab.0.center" timestamp="1594224767699">
+    <state width="1345" height="227" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594227490290" />
+    <state width="1345" height="227" key="GridCell.Tab.0.center" timestamp="1594227490289">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1594224767699" />
-    <state width="1345" height="227" key="GridCell.Tab.0.left" timestamp="1594224767699">
+    <state width="1345" height="227" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1594227490289" />
+    <state width="1345" height="227" key="GridCell.Tab.0.left" timestamp="1594227490289">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1594224767699" />
-    <state width="1345" height="227" key="GridCell.Tab.0.right" timestamp="1594224767699">
+    <state width="1345" height="227" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1594227490289" />
+    <state width="1345" height="227" key="GridCell.Tab.0.right" timestamp="1594227490289">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="227" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1594224767699" />
-    <state width="1345" height="111" key="GridCell.Tab.1.bottom" timestamp="1594162688806">
+    <state width="1345" height="227" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1594227490289" />
+    <state width="1345" height="389" key="GridCell.Tab.1.bottom" timestamp="1594227365374">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="111" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594162688806" />
-    <state width="1345" height="111" key="GridCell.Tab.1.center" timestamp="1594162688805">
+    <state width="1345" height="389" key="GridCell.Tab.1.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594227365374" />
+    <state width="1345" height="389" key="GridCell.Tab.1.center" timestamp="1594227365374">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="111" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1594162688805" />
-    <state width="1345" height="111" key="GridCell.Tab.1.left" timestamp="1594162688805">
+    <state width="1345" height="389" key="GridCell.Tab.1.center/0.0.1366.768@0.0.1366.768" timestamp="1594227365374" />
+    <state width="1345" height="389" key="GridCell.Tab.1.left" timestamp="1594227365374">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="111" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1594162688805" />
-    <state width="1345" height="111" key="GridCell.Tab.1.right" timestamp="1594162688806">
+    <state width="1345" height="389" key="GridCell.Tab.1.left/0.0.1366.768@0.0.1366.768" timestamp="1594227365374" />
+    <state width="1345" height="389" key="GridCell.Tab.1.right" timestamp="1594227365374">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="111" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1594162688806" />
+    <state width="1345" height="389" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1594227365374" />
     <state x="186" y="30" key="SettingsEditor" timestamp="1593349094126">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
