@@ -80,16 +80,11 @@ def connect_to_server(server_num, port_num, segment_num= None):
     global host
     try:
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-
-
         server.connect((host, port_num))
-
         file_size = int((server.recv(1024)).decode())
-
         total_bytes = divide(file_size, len(port_list))
-
         data = b''
+
         if segment_num is None:
             segment_num = server_num
 
@@ -101,21 +96,13 @@ def connect_to_server(server_num, port_num, segment_num= None):
             data += server.recv(file_size)
             downloaded_bytes[server_num] = len(data)
         end = time.time()
-
         download_speed[server_num] = len(data)*0.001/(end-start)
-
-
         if segment_num in received_segments:
             pass
         else:
 
             segments.append(data)
             received_segments.append(segment_num)
-
-
-
-
-
 
         to_be_received = [item for item in total_segments if item not in received_segments]
         return server_num
@@ -175,8 +162,8 @@ def show_status(downloaded_bytes, total_bytes, download_speed):
     print(f"Total: {sum(downloaded_bytes)}/{file_size}, download speed: {sum(download_speed)/len(download_speed)} kb/s")
 
 
-
 start()
+
 
 if not resume:
     for i in range(len(port_list)-1, -1, -1):

@@ -1,12 +1,10 @@
-import sys
 import socket, os, time
 import threading
-import pickle
 import argparse
 
 parser = argparse.ArgumentParser()
-# adding parameters
 
+# adding parameters
 parser.add_argument('-i', '--status_interval', help="", type=int, default=2)
 parser.add_argument('-n', '--num_servers', help="", type=int)
 parser.add_argument('-f', '--file_location', help="", default="to_be_sent.mp4")
@@ -23,7 +21,6 @@ port_list = args.list_of_ports
 
 status = [True] * num_of_servers
 server_threads = []
-
 
 
 def create_server(status, server_num, port_num):
@@ -50,7 +47,6 @@ def create_server(status, server_num, port_num):
     try:
         while status[server_num]:
             conn, addr = server_sockets[server_num].accept()
-            #print(f"[Client connected] ... ")
 
             size = (os.path.getsize(file_location))
             with open(file_location, "rb") as mp4:
@@ -61,7 +57,6 @@ def create_server(status, server_num, port_num):
 
                 sent_length = 0
                 s = (int(conn.recv(1024)))
-                #print(s)
                 segments_gen = divide(data, num_of_servers)
                 segments = []
                 for k in segments_gen:
@@ -79,10 +74,8 @@ def create_server(status, server_num, port_num):
 
 
                 time.sleep(0.5)
-                #print(f"Segment {s} from Server with port {port_num}")
                 conn.close()
     except Exception as e:
-        #print(e)
         pass
 
 
@@ -100,6 +93,7 @@ def start(status):
         server_thread.start()
         print(f"Server {i}: Port: {port_list[i]} Status: {status[i]}, To shutdwon server {i} Press E{i} ")
 
+
 def start_specific_server(status, server_num):
     """Starts a specific server
 
@@ -109,6 +103,7 @@ def start_specific_server(status, server_num):
 :type server_num: int
 """
     create_server(status, server_num,  port_list[server_num])
+
 
 def change_status(string):
     """changes the status of a particular server
@@ -141,6 +136,7 @@ def divide(string, parts):
     k, m = divmod(len(string), parts)
     return (string[i * k + min(i, m):(i + 1) * k + min(i + 1, m)] for i in range(parts))
 
+
 def refresh():
 
     """Refreshes the status of server
@@ -151,12 +147,15 @@ def refresh():
         clear_screen()
         for i in range(num_of_servers):
             print(f"Server {i}: Port: {port_list[i]} Status: {status[i]}, To shutdwon server {i} Press E{i} ")
+
+
 def clear_screen():
 
     """Clear Console Screen
 
 """
     os.system('cls' if os.name == 'nt' else 'clear')
+
 
 outputThread = threading.Thread(target=refresh)
 outputThread.start()

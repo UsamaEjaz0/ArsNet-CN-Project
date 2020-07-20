@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51dc3307-abfe-4fe8-91c8-a1867734c2c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/TcpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TcpClient.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/TcpServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/TcpServer.py" afterDir="false" />
     </list>
