@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="51dc3307-abfe-4fe8-91c8-a1867734c2c7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Client/TcpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TcpClient.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/Client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Report.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Report.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/~$Report.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Dump.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Dump.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Received.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Received.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Received_segments.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Received_segments.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TcpClient.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Server/TcpServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/TcpServer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -121,7 +130,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Client/TcpClient.py" />
-      <option name="PARAMETERS" value="-i 2 -a &quot;192.168.56.1&quot; -o &quot;received.mp4&quot; -r 0 -p 5050 5051 5052 5053 5054 5055 5056 5057" />
+      <option name="PARAMETERS" value="--help" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -163,7 +172,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Server/TcpServer.py" />
-      <option name="PARAMETERS" value="-i 2 -n 8 -f &quot;to_be_sent.mp4&quot; -p 5050 5051 5052 5053 5054 5055 5056 5057" />
+      <option name="PARAMETERS" value="--help" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -250,34 +259,38 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595256551161">
+    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595264072567">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1595256551161" />
+    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1595264072567" />
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592490969742">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1592490969742" />
+    <state x="490" y="58" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1595264056744">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="490" y="58" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.768@0.0.1366.768" timestamp="1595264056744" />
     <state x="463" y="139" key="FileChooserDialogImpl" timestamp="1594225088615">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1594225088615" />
-    <state width="1345" height="290" key="GridCell.Tab.0.bottom" timestamp="1595256599567">
+    <state width="1345" height="343" key="GridCell.Tab.0.bottom" timestamp="1595264074825">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="290" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1595256599567" />
-    <state width="1345" height="290" key="GridCell.Tab.0.center" timestamp="1595256599567">
+    <state width="1345" height="343" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1595264074825" />
+    <state width="1345" height="343" key="GridCell.Tab.0.center" timestamp="1595264074825">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="290" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1595256599567" />
-    <state width="1345" height="290" key="GridCell.Tab.0.left" timestamp="1595256599567">
+    <state width="1345" height="343" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1595264074825" />
+    <state width="1345" height="343" key="GridCell.Tab.0.left" timestamp="1595264074824">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="290" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1595256599567" />
-    <state width="1345" height="290" key="GridCell.Tab.0.right" timestamp="1595256599567">
+    <state width="1345" height="343" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1595264074824" />
+    <state width="1345" height="343" key="GridCell.Tab.0.right" timestamp="1595264074825">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="290" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1595256599567" />
+    <state width="1345" height="343" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1595264074825" />
     <state width="1345" height="389" key="GridCell.Tab.1.bottom" timestamp="1594231250249">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

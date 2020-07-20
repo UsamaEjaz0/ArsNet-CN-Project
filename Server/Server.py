@@ -22,7 +22,11 @@ port_list = args.list_of_ports
 status = [True] * num_of_servers
 server_threads = []
 
-
+for i in port_list:
+    if i >1023 and i < 65535:
+        print("Enter valid port number")
+        break
+        exit()
 def create_server(status, server_num, port_num):
 
     """Creates a new server
@@ -163,5 +167,3 @@ while True:
     inp = input()
     change_status(inp)
     print(inp)
-
-
