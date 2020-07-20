@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="51dc3307-abfe-4fe8-91c8-a1867734c2c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/TcpClient.py" beforeDir="false" afterPath="$PROJECT_DIR$/Client/TcpClient.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/TcpServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/Server/TcpServer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,6 +130,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="TcpClient" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ComputerNetworks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Client" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Client/TcpClient.py" />
+      <option name="PARAMETERS" value="-i 2 -a &quot;192.168.56.1&quot; -o &quot;received.mp4&quot; -r 0 -p 5050 5051 5052 5053 5054 5055 5056 5057" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="TcpServer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ComputerNetworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -172,17 +195,17 @@
     </configuration>
     <list>
       <item itemvalue="Python.Client" />
+      <item itemvalue="Python.FileSegmentation" />
       <item itemvalue="Python.TcpClient" />
       <item itemvalue="Python.TcpServer" />
-      <item itemvalue="Python.FileSegmentation" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.TcpClient" />
         <item itemvalue="Python.TcpServer" />
+        <item itemvalue="Python.TcpClient" />
         <item itemvalue="Python.FileSegmentation" />
         <item itemvalue="Python.TcpServer" />
-        <item itemvalue="Python.Client" />
       </list>
     </recent_temporary>
   </component>
@@ -228,10 +251,10 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594227457967">
+    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595256551161">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1594227457967" />
+    <state x="164" y="8" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1595256551161" />
     <state x="429" y="194" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592490969742">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -240,22 +263,22 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="463" y="139" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1594225088615" />
-    <state width="1345" height="389" key="GridCell.Tab.0.bottom" timestamp="1594231250249">
+    <state width="1345" height="290" key="GridCell.Tab.0.bottom" timestamp="1595256599567">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="389" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1594231250249" />
-    <state width="1345" height="389" key="GridCell.Tab.0.center" timestamp="1594231250249">
+    <state width="1345" height="290" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1595256599567" />
+    <state width="1345" height="290" key="GridCell.Tab.0.center" timestamp="1595256599567">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="389" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1594231250249" />
-    <state width="1345" height="389" key="GridCell.Tab.0.left" timestamp="1594231250249">
+    <state width="1345" height="290" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1595256599567" />
+    <state width="1345" height="290" key="GridCell.Tab.0.left" timestamp="1595256599567">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="389" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1594231250249" />
-    <state width="1345" height="389" key="GridCell.Tab.0.right" timestamp="1594231250249">
+    <state width="1345" height="290" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1595256599567" />
+    <state width="1345" height="290" key="GridCell.Tab.0.right" timestamp="1595256599567">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state width="1345" height="389" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1594231250249" />
+    <state width="1345" height="290" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1595256599567" />
     <state width="1345" height="389" key="GridCell.Tab.1.bottom" timestamp="1594231250249">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -272,10 +295,10 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1345" height="389" key="GridCell.Tab.1.right/0.0.1366.768@0.0.1366.768" timestamp="1594231250249" />
-    <state x="186" y="30" key="SettingsEditor" timestamp="1593349094126">
+    <state x="186" y="30" key="SettingsEditor" timestamp="1595256489846">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="186" y="30" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1593349094126" />
+    <state x="186" y="30" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1595256489846" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1592593456368">
       <screen x="0" y="0" width="1366" height="768" />
     </state>

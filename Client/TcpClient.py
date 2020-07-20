@@ -37,6 +37,16 @@ def get_file_size():
 
 
 def divide(num, div):
+
+    """Divides the input string of bytes into "parts" parts.
+
+:param string: The byte string to be divided
+:type string: byte
+:param parts: Number of parts in which the string is to be divided
+:type parts: int
+:returns: a list of bytes
+:rtype: list
+"""
     return [num // div + (1 if x < num % div else 0) for x in range(div)]
 
 
@@ -47,6 +57,17 @@ file_size = 0
 
 count = 0
 def connect_to_server(server_num, port_num, segment_num= None):
+
+    """Connects to server specified by the port number
+
+:param server_num: Server number that is connected
+:type server_num: int
+:param port_num: Port number of the server to be connected
+:type port_num: int
+:param segment_num: The segment number to be sent
+:type segment_num: int
+
+"""
     global received_segments
     global total_segments
     global failed_servers
@@ -111,11 +132,25 @@ thread = []
 
 
 def receive_segment_from_server(server, server_num, segment_num=None):
+
+    """To receive particular segment from a particular server
+
+:param server: The server num to be connected to
+:type server: int
+:param server_num: Server Number to be connected
+:type server_num: int
+:param segment_num: segment number to be received
+:type segment_num: int
+"""
     segment_num_in_bytes = (str(segment_num)).encode()
     server.send(segment_num_in_bytes)
 
 
 def start():
+
+    """Starts the Client
+
+"""
     if not resume:
         for i in range(len(port_list)):
             thread.append(threading.Thread(target=connect_to_server, args=(i, port_list[i])))
@@ -124,6 +159,17 @@ def start():
 
 
 def show_status(downloaded_bytes, total_bytes, download_speed):
+
+    """Shows Status of the client
+
+:param downloaded_bytes: List of downloaded bytes
+:type downloaded_bytes: list
+:param total_bytes: A list of total bytes to be received
+:type total_bytes: list
+:param download_speed: A list of download speed
+:type download_speed: list
+
+"""
     for i in range(len(port_list)):
         print(f"Server {i}: {downloaded_bytes[i]}/{total_bytes[i]}, download speed: {download_speed[i]} kb/s ")
     print(f"Total: {sum(downloaded_bytes)}/{file_size}, download speed: {sum(download_speed)/len(download_speed)} kb/s")
@@ -138,6 +184,8 @@ if not resume:
 
 
 def refresh():
+    """Refreshes the client status
+"""
     os.system('cls' if os.name == 'nt' else 'clear')
     show_status(downloaded_bytes, total_bytes, download_speed)
 
@@ -158,6 +206,9 @@ server_used_for_resume = 0
 
 
 def get_remaining_segments():
+    """Gets remaining segments that were not obtained due to server failure
+
+"""
     global gotten_remaining_segs
     global alive_servers
     global to_be_received
@@ -184,6 +235,19 @@ if gotten_remaining_segs:
 
 
 def partition(arr2, arr, low, high):
+    """Partition function helps in quick sort
+
+:param arr2: Array to be sorted
+:type arr2: list
+:param arr: Array on the basis of which arr2 is sorted
+:type arr: list
+:param low: starting point of list
+:type low: int
+:param high: Ending point of list
+:type high: int
+:returns: sorted list arr2
+:rtype: list
+"""
     i = (low - 1)
     pivot = arr[high]
 
@@ -201,6 +265,20 @@ def partition(arr2, arr, low, high):
 
 
 def quick_sort(arr2, arr, low, high):
+    """Quicksort that sorts one array on the basis of other array
+
+:param arr2: Array to be sorted
+:type arr2: list
+:param arr: Array on the basis of which arr2 is sorted
+:type arr: list
+:param low: starting point of list
+:type low: int
+:param high: Ending point of list
+:type high: int
+:returns: sorted list arr2
+:rtype: list
+"""
+
     if low < high:
         pi = partition(arr2, arr, low, high)
         quick_sort(arr2, arr, low, pi - 1)
