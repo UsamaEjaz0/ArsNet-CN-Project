@@ -1,4 +1,6 @@
-import socket, os, time
+import socket
+import os
+import time
 import threading
 import argparse
 
@@ -23,12 +25,13 @@ status = [True] * num_of_servers
 server_threads = []
 
 for i in port_list:
-    if i >1023 and i < 65535:
+    if i > 1023 and i < 65535:
         print("Enter valid port number")
         break
         exit()
-def create_server(status, server_num, port_num):
 
+
+def create_server(status, server_num, port_num):
     """Creates a new server
 
 :param status: list of all the servers' status
@@ -75,8 +78,6 @@ def create_server(status, server_num, port_num):
                 for i in range(20):
                     conn.send(sub_segments[i])
 
-
-
                 time.sleep(0.5)
                 conn.close()
     except Exception as e:
@@ -84,7 +85,6 @@ def create_server(status, server_num, port_num):
 
 
 def start(status):
-
     """Starts all the servers and threads
 
 :param status: A list of current status of every server
@@ -93,9 +93,11 @@ def start(status):
 """
 
     for i in range(num_of_servers):
-        server_thread = threading.Thread(target=create_server, args=(status, i, int(port_list[i])))
+        server_thread = threading.Thread(
+            target=create_server, args=(status, i, int(port_list[i])))
         server_thread.start()
-        print(f"Server {i}: Port: {port_list[i]} Status: {status[i]}, To shutdwon server {i} Press E{i} ")
+        print(
+            f"Server {i}: Port: {port_list[i]} Status: {status[i]}, To shutdwon server {i} Press E{i} ")
 
 
 def start_specific_server(status, server_num):
@@ -120,14 +122,14 @@ def change_status(string):
     status[int(string[1:2])] = False
     server_sockets[int(string[1:2])].close()
     for i in range(num_of_servers):
-        print(f"Server {i}: Port: {port_list[i]} Status: {status[i]}, To shutdwon server {i} Press E{i} ")
+        print(
+            f"Server {i}: Port: {port_list[i]} Status: {status[i]}, To shutdwon server {i} Press E{i} ")
 
 
 start(status)
 
 
 def divide(string, parts):
-
     """Divides the input string of bytes into "parts" parts.
 
 :param string: The byte string to be divided
@@ -142,7 +144,6 @@ def divide(string, parts):
 
 
 def refresh():
-
     """Refreshes the status of server
 
 """
@@ -150,11 +151,11 @@ def refresh():
         time.sleep(i_flag)
         clear_screen()
         for i in range(num_of_servers):
-            print(f"Server {i}: Port: {port_list[i]} Status: {status[i]}, To shutdwon server {i} Press E{i} ")
+            print(
+                f"Server {i}: Port: {port_list[i]} Status: {status[i]}, To shutdwon server {i} Press E{i} ")
 
 
 def clear_screen():
-
     """Clear Console Screen
 
 """
