@@ -10,7 +10,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument('-i', '--status_interval', help="", type=int, default=2)
 parser.add_argument('-n', '--num_servers', help="", type=int)
 parser.add_argument('-f', '--file_location', help="", default="to_be_sent.mp4")
-parser.add_argument('-p', '--list_of_ports', nargs='+', help="", type=int)
+parser.add_argument('-p', '--list_of_ports', nargs='+',
+                    help="", type=int, metavar="port_list", required=True)
 args = parser.parse_args()
 
 
@@ -22,7 +23,6 @@ file_location = args.file_location
 port_list = args.list_of_ports
 status = [True] * num_of_servers
 server_threads = []
-
 for i in port_list:
     if i < 1024:
         print("Enter valid port number")
