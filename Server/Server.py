@@ -20,14 +20,12 @@ i_flag = args.status_interval
 num_of_servers = args.num_servers
 file_location = args.file_location
 port_list = args.list_of_ports
-
 status = [True] * num_of_servers
 server_threads = []
 
 for i in port_list:
-    if i > 1023 and i < 65535:
+    if i < 1024:
         print("Enter valid port number")
-        break
         exit()
 
 
